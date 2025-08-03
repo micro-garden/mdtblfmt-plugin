@@ -1,0 +1,17 @@
+[{
+	"Name": "mdtblfmt",
+	"Description": "Reformats all Markdown tables in the current buffer.",
+	"Author": "Aki Kareha",
+	"Tags": ["markdown", "table", "format", "formatter", "fmt"],
+	"Website": "https://github.com/akikareha/micro-mdtblfmt-plugin",
+	"License": "MIT",
+	"Versions": [
+		{
+			"Version": "0.0.0",
+			"Url": "https://github.com/akikareha/micro-mdtblfmt-plugin/archive/v0.0.0.zip",
+			"Require": {
+				"micro": ">=2.0.0"
+			}
+		}
+	]
+}]
