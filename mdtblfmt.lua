@@ -114,7 +114,7 @@ function format_table_block(lines)
 end
 
 -- search and format table blocks in the buffer
-function formattables(bp)
+function MDTblFmtCmd(bp)
 	local buf = bp.Buf
 	local lines = {}
 	for i = 0, buf:LinesNum() - 1 do
@@ -153,6 +153,6 @@ function formattables(bp)
 end
 
 function init()
-	config.MakeCommand("mdtblfmt", formattables, config.NoComplete)
+	config.MakeCommand("mdtblfmt", MDTblFmtCmd, config.NoComplete)
 	config.AddRuntimeFile("mdtblfmt", config.RTHelp, "help/mdtblfmt.md")
 end
