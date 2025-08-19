@@ -1,4 +1,4 @@
-VERSION = "0.0.0"
+VERSION = "0.0.1"
 
 local micro = import("micro")
 local config = import("micro/config")
@@ -114,7 +114,7 @@ function format_table_block(lines)
 end
 
 -- search and format table blocks in the buffer
-function MDTblFmtCmd(bp)
+function MdTblFmt(bp)
 	local buf = bp.Buf
 	local lines = {}
 	for i = 0, buf:LinesNum() - 1 do
@@ -153,6 +153,6 @@ function MDTblFmtCmd(bp)
 end
 
 function init()
-	config.MakeCommand("mdtblfmt", MDTblFmtCmd, config.NoComplete)
+	config.MakeCommand("mdtblfmt", MdTblFmt, config.NoComplete)
 	config.AddRuntimeFile("mdtblfmt", config.RTHelp, "help/mdtblfmt.md")
 end
